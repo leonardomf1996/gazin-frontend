@@ -15,6 +15,7 @@ function Update() {
    };
 
    const [values, setValues] = useState(initialFields);
+   const [error, setError] = useState(false);
 
    const handleInputChange = (event) => {
       let { name, value } = event.target;
@@ -28,7 +29,8 @@ function Update() {
    const handleFormSubmit = (event) => {
       event.preventDefault();
 
-      if (values.id === '' || values.nome === '' || values.sexo === null || values.idade === '' || values.hobby === '' || values.data === '') {
+      if (values.id === '') {
+         setError(true);
          return;
       }
       const json = {
@@ -40,6 +42,7 @@ function Update() {
       };
       api.put(`developers/${values.id}`, json);
       setValues(initialFields);
+      setError(false);
    }
 
    return (
@@ -91,6 +94,10 @@ function Update() {
                Alterar usuário
             </Button>
          </Form>
+
+         {error && (
+            <h2>ID do usuário é obrigatório para realizar uma alteração!</h2>
+         )}
       </Container>
    );
 }
