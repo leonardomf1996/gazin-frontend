@@ -37,7 +37,7 @@ function Create() {
          hobby: values.hobby,
          datanascimento: values.data
       };
-      const response = api.post('developers', json);
+      api.post('developers', json);
       setValues(initialFields);
    }
 
@@ -59,6 +59,7 @@ function Create() {
                onChange={handleInputChange}
                maxLength={1}
             />
+
             <Input
                placeholder="Insira a sua idade"
                name="idade"

@@ -60,11 +60,11 @@ function Show() {
             {developers ? developers.map(developer => (
                <ItemList key={developer.id}>
                   <h1>{developer.nome}</h1>
-                  <p>{developer.id}</p>
-                  <p>{developer.sexo}</p>
-                  <p>{developer.idade}</p>
-                  <p>{developer.hobby}</p>
-                  <p>{developer.datanascimento}</p>
+                  <p>ID: {developer.id}</p>
+                  <p>Sexo: {developer.sexo}</p>
+                  <p>Idade: {developer.idade}</p>
+                  <p>Hobby: {developer.hobby}</p>
+                  <p>Data de Nascimento: {developer.datanascimento}</p>
                </ItemList>
             )) : (<h1>{errors}</h1>)}
          </List>

@@ -9,9 +9,15 @@ export const Container = styled.div`
    width: 100%;
 
    background: #292961;
-   color: #DBDBDB;   
+`;
 
+export const Strong = styled.strong`
+   color: #DBDBDB;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-size: 1.5rem;
-   
+   font-size: 1.5rem;   
+
+   &:hover {
+      color: #DBDB;
+      font-size: 1.6rem;
+   }
 `;

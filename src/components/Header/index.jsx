@@ -1,23 +1,23 @@
-import { Container } from './styles';
+import { Container, Strong } from './styles';
 import { Link } from 'react-router-dom';
 
 function Header() {
    return (
       <Container>
          <Link to={'/'}>
-            Show
+            <Strong>Show</Strong>
          </Link>
 
          <Link to={'/Create'}>
-            Create
+            <Strong>Create</Strong>
          </Link>
 
          <Link to={'/Update'}>
-            Update
+            <Strong> Update</Strong>
          </Link>
 
          <Link to={'/Delete'}>
-            Delete
+            <Strong> Delete</Strong>
          </Link>
       </Container>
    );

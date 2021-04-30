@@ -34,7 +34,7 @@ export const List = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
+   justify-content: flex-start;
    margin-top: 50px;
    padding: 10px;
    width: 100%; 
@@ -45,5 +45,7 @@ export const ItemList = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   margin-top: 20px;      
+   margin-bottom: 30px;      
+
+   font-family: Arial, Helvetica, sans-serif;
 `;

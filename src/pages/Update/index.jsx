@@ -38,7 +38,7 @@ function Update() {
          hobby: values.hobby,
          datanascimento: values.data
       };
-      const response = api.put(`developers/${values.id}`, json);
+      api.put(`developers/${values.id}`, json);
       setValues(initialFields);
    }
 

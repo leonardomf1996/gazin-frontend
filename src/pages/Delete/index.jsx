@@ -26,7 +26,7 @@ function Delete() {
       if (values.id === '') {
          return;
       }      
-      const response = api.delete(`developers/${values.id}`);
+      api.delete(`developers/${values.id}`);
       setValues(initialFields);
    }
 
